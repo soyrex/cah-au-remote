@@ -7,5 +7,8 @@ $password = $url["pass"];
 $db = substr($url["path"], 1);
 
 $conn = new mysqli($server, $username, $password, $db);
+
+$res = $conn->query("SHOW TABLES;");
+print_r($res);
 ?>
 What's your name?
