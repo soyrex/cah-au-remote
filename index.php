@@ -8,9 +8,9 @@ $db = substr($url["path"], 1);
 
 $mysql = new mysqli($server, $username, $password, $db);
 
- $mysql->query("CREATE TABLE white (id INT(4) NOT NULL AUTOINCREMENT, text VARCHAR(128) NOT NULL DEFAULT '', CONSTRAINT id PRIMARY KEY(id))");
+ $mysql->query("CREATE TABLE white (id INT(4) NOT NULL AUTOINCREMENT, text VARCHAR(128) NOT NULL, CONSTRAINT id PRIMARY KEY(id))");
 
-$res = $mysql->query("SHOW TABLES);
+$res = $mysql->query("SHOW TABLES");
 print_r($res);
 
 ?>
